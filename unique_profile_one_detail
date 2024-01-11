@@ -36,6 +36,9 @@ try:
     # Utilisation de BeautifulSoup pour analyser le code HTML
     soup = BeautifulSoup(page_source, 'html.parser')
 
+    # Récupération du Nom
+    nom = soup.find_all(class_= "name css-1ta711")
+
     # Récupération des ROIs
     rois = soup.find_all(class_="Number css-rtly53")
 
@@ -43,7 +46,6 @@ try:
     if len(rois) == 6:
         data = {
             'Daily ROI': rois[0].text,
-            'Daily PNL (USD)': rois[1].text,
         }
     else:
         data = {'Error': 'Nombre inattendu de valeurs ROI'}
