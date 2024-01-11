@@ -45,6 +45,7 @@ try:
     # Assurez-vous qu'il y a 6 valeurs ROI
     if len(rois) == 6:
         data = {
+            'Nom': nom,
             'Daily ROI': rois[0].text,
         }
     else:
