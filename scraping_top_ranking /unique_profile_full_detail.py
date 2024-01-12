@@ -9,7 +9,7 @@ try:
     time.sleep(5)
 
     # Clique sur le premier élément avec la classe "name css-vurnku"
-    element = driver.find_element(By.CLASS_NAME, "name.css-vurnku")
+    element = driver.find_element(By.CLASS_NAME, "TraderCard.css-vurnku")
     element.click()
 
     # Attendez 5 secondes après le clic
