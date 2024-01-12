@@ -1,20 +1,5 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-import pandas as pd
-import time
-
 # URL de la page à scraper
 url = "https://www.binance.com/en/futures-activity/leaderboard/top-ranking"
-
-# Configuration du WebDriver
-chrome_options = Options()
-chrome_options.add_argument("--disable-gpu")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument("--headless")
-driver = webdriver.Chrome(options=chrome_options)
 
 data_list = []  # Liste pour stocker les données de chaque élément
 
