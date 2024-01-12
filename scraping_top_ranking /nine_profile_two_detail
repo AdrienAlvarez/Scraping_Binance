@@ -41,7 +41,8 @@ try:
 
             data = {
                 'Nom': nom,
-                'Daily ROI': rois[0].text
+                'Daily ROI': rois[0].text,
+                'Daily PNL': rois[1].text
             }
 
 
