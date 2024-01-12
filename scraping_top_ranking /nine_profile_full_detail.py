@@ -11,7 +11,7 @@ try:
     # Boucle pour cliquer sur les 9 premiers éléments
     for i in range(9):
         # Clique sur l'élément
-        elements = driver.find_elements(By.CLASS_NAME, "name.css-vurnku")
+        elements = driver.find_elements(By.CLASS_NAME, "TraderCard.css-vurnku")
         if i < len(elements):
             elements[i].click()
             time.sleep(5)  # Attente après le clic
