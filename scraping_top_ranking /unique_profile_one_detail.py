@@ -1,9 +1,3 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-from bs4 import BeautifulSoup
-import pandas as pd
-import time
 
 # URL de la page à scraper
 url = "https://www.binance.com/en/futures-activity/leaderboard/top-ranking"
@@ -24,7 +18,7 @@ try:
     time.sleep(5)
 
     # Clique sur le premier élément avec la classe "name css-vurnku"
-    element = driver.find_element(By.CLASS_NAME, "name.css-vurnku")
+    element = driver.find_element(By.CLASS_NAME, "TraderCard.css-vurnku")
     element.click()
 
     # Attendez 5 secondes après le clic
