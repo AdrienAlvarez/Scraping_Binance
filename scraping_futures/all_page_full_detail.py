@@ -21,7 +21,7 @@ def get_trader_info(url, pages):
                 driver.execute_script(f"document.getElementById('page-{page}').click()")
                 time.sleep(3)
 
-            for trader_index in range(3):
+            for trader_index in range(15):
                 traders = driver.find_elements(By.XPATH, "//div[contains(@class, 'TraderCard')]")
                 if len(traders) > trader_index:
                     traders[trader_index].click()
@@ -79,5 +79,5 @@ def get_trader_info(url, pages):
 url = "https://www.binance.com/en/futures-activity/leaderboard/futures/"
 
 # Obtenir les infos des traders des 3 premières pages
-trader_info = get_trader_info(url, 2)
+trader_info = get_trader_info(url, 7)
 print(trader_info)
