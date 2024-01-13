@@ -25,7 +25,7 @@ def get_trader_info(url, pages):
                 traders = driver.find_elements(By.XPATH, "//div[contains(@class, 'TraderCard')]")
                 if len(traders) > trader_index:
                     traders[trader_index].click()
-                    time.sleep(3)
+                    time.sleep(2)
 
                     name = driver.find_element(By.CLASS_NAME, "name-wrap.css-4cffwv").text
 
@@ -53,11 +53,11 @@ def get_trader_info(url, pages):
                     })
 
                     driver.back()
-                    time.sleep(3)
+                    time.sleep(2)
 
                     if page > 1:
                         driver.execute_script(f"document.getElementById('page-{page}').click()")
-                        time.sleep(3)
+                        time.sleep(2)
 
     finally:
         driver.quit()
